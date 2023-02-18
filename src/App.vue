@@ -13,11 +13,11 @@
                 </div>
               </div>
               <div class="col-md-3">
-                  <div class="form-check form-switch d-flex justify-content-center align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                           v-model="openFilter">
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Show filter option</label>
-                  </div>
+                <div class="form-check form-switch d-flex justify-content-center align-items-center">
+                  <input class="form-check-input me-2" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                         v-model="openFilter">
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Show filter option</label>
+                </div>
               </div>
             </div>
           </template>
@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import {VDataTable} from "v-datatable"
+import { VDataTable } from "@webartistxyz/vue-datatable"
 
 export default {
   components: {VDataTable},
@@ -118,18 +118,16 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      fetch('https://jsonplaceholder.typicode.com/posts')
-          .then(response => response.json())
-          .then(json => {
-            this.dataSet = json;
-          })
-    }, 1)
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(json => {
+          this.dataSet = json;
+        })
   }
 };
 </script>
 
 <style>
-@import "v-datatable/dist/style.css";
+@import "@webartistxyz/vue-datatable/dist/style.css";
 </style>
 
