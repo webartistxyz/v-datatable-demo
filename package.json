@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@webartistxyz/vue-datatable": "^1.0.0",
+    "@webartistxyz/vue-datatable": "^1.2.5",
     "vue": "^3.2.45"
   },
   "devDependencies": {
